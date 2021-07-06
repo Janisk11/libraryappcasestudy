@@ -1,1 +1,64 @@
-All Authors
+
+
+  
+<div class="container">
+  <div class="row">
+    
+    <div class="col-md-12"> 
+      
+      <div class="card">
+          <div class="card-hear">
+              <h3>Authors</h3>
+          </div>
+
+            <div class="card-body">
+            
+            
+            
+            <!--/stories-->
+            <%for(i=0;i<authors.length;i++){%>
+                    <div class="row">    
+                            <br>
+                            <div class="col-md-2 col-sm-3 text-center">
+                                <a class="story-title" href="#"><img alt="" src="/uploads/images/<%=authors[i].image%>" style="width:100px;height:100px" class="img-circle"></a>
+                            </div>
+                            <div class="col-md-8 col-sm-7">
+                                <h3><%=authors[i].name%></h3>
+
+                                <div class="row">
+                                        <div class="col-xs-9">
+                                    
+                                            <small><a href="/authors/<%=authors[i]._id%>"class="text-muted">Read More</a></small>
+                                        </div>
+
+                                        <div class="col-xs-3"></div>
+                                </div>
+                                <br><br>
+                            </div>
+                        <!-- <div class="col-md-2 col-sm-2 text-center">
+                        <a href="/authors/editauthor/<%=authors[i]._id%>"><button class="editbook btn addbtn">Update</button></a>
+                -->
+                        <!-- <a href=""><button class="delete btn addbtn">Delete</button></a>  -->
+                        <!-- <form action='/authors/<%=authors[i]._id%>?_method=DELETE' method="POST" >
+                            <button class="delete btn addbtn">Delete</button>
+                        </form> -->
+
+
+
+                        <!-- </div> -->
+                    </div>
+
+                    <hr>
+            <%}%>
+
+            
+  
+         </div>
+      </div>
+                                                                                       
+	                                                
+                                                      
+   	</div><!--/col-12-->
+  </div>
+</div>
+        
