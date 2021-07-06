@@ -53,10 +53,11 @@ router.post('/',upload.single('image'),  (req,res)=>{
     }) 
     var author = Author(authoritem);
     author.save();
-    res.redirect('authors')
+    res.redirect('/authors')
   
 
     })
+
 
 // single Author
 router.get('/:id',function(req,res){
@@ -69,6 +70,53 @@ router.get('/:id',function(req,res){
     })
        
 });
+
+router.get('/:id/edit',function(req,res){
+    const id = req.params.id
+    Author.findOne({_id: id})
+    .then(function(author){
+        res.render('authors/edit',{
+            author:author
+        });
+    })
+   
+    
+});
+
+
+router.put('/:id',upload.single('image'),function(req,res){
+    
+    id = req.params.id,
+    author = req.body.name,  
+    about = req.body.about,
+    image = req.file.filename,
+    Author.findByIdAndUpdate({_id: id},
+                                {$set:{
+                                "name":author,
+                                "image":image,
+                                "about":about
+                            }
+                                }).exec()
+        // .then(function(req,res){
+        res.redirect('/authors');
+    // })
+    })
+
+
+router.delete('/:id',function(req,res){
+    const id = req.params.id
+    Author.findOneAndDelete({_id: id})
+    .then(function(author){
+    res.redirect('/authors');
+});
+       
+});
+
+ 
+
+
+
+
 
 
 

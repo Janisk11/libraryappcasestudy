@@ -18,7 +18,7 @@ app.use(express.urlencoded({extended:true}));
 app.use(methodOverride('_method'));
 
 const mongoose = require('mongoose')
-mongoose.connect('mongodb+srv://userone:userone@ictakfiles.qofk2.mongodb.net/CaseStudyLibrary?retryWrites=true&w=majority',{useNewUrlParser:true},{ useUnifiedTopology: true } )
+mongoose.connect('mongodb+srv://userone:userone@ictakfiles.qofk2.mongodb.net/CaseStudyLibrary?retryWrites=true&w=majority',{useNewUrlParser:true,useCreateIndex: true,useFindAndModify: false, useUnifiedTopology: true } )
 
 app.use('/',indexRouter)
 app.use('/authors',authorRouter)
