@@ -9,6 +9,7 @@ const port = process.env.PORT || 3000 ;
 const indexRouter =require ('./routes/index')
 const authorRouter =require ('./routes/authors')
 const bookRouter =require ('./routes/books')
+const loginRouter =require ('./routes/login')
 
 app.set('view engine','ejs')
 app.set('views',__dirname +'/views')
@@ -24,6 +25,7 @@ mongoose.connect('mongodb+srv://userone:userone@ictakfiles.qofk2.mongodb.net/Cas
 app.use('/',indexRouter)
 app.use('/authors',authorRouter)
 app.use('/books',bookRouter)
+app.use('/login',loginRouter)
 
 
 app.listen(port,()=>{

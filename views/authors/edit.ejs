@@ -1,43 +1,45 @@
 <div class="container">
-    <div>
-        <h2 class="text-center">Edit Author</h2>
-    </div>
-    <br>
+    <div class="group_form ">
+        <div>
+            <h2 class="text-center">Edit Author</h2>
+        </div>
+        <br>
 
-    <div>
-        <form class="new_entry" action='/authors/<%=author._id%>?_method=PUT' method="POST"  enctype="multipart/form-data">
+        <div>
+            <form class="new_entry" action='/authors/<%=author._id%>?_method=PUT' method="POST"  enctype="multipart/form-data">
+                
             
-           
-            <div class="mb-3">
-                <label style="width: 100%;" for="">Name</label>
-                <input style="width: 100%;" type="text" name="name" value="<%=author.name %>" required >
-            </div>
-            <br>
-            <div class="mb-3">
-                <label style="width: 100%;" for="">About</label>
-                <input style="width: 100%;" type="text" name="about" value="<%=author.about %>" required >
-               
-            </div>
-            <br>
-            <div class="mb-3 ">
-                <label style="width: 100%;" for="" class="form-label">Image</label>
-                <input style="width: 100%;" type="file" name="image" value="<%=author.image %>" required  >
+                <div class="mb-3">
+                    <label style="width: 100%;" for="">Name</label>
+                    <input style="width: 100%;" type="text" name="name" value="<%=author.name %>" required >
+                </div>
+                <br>
+                <div class="mb-3">
+                    <label style="width: 100%;" for="">About</label>
+                    <input style="width: 100%;" type="text" name="about" value="<%=author.about %>" required >
+                
+                </div>
+                <br>
+                <div class="mb-3 ">
+                    <label style="width: 100%;" for="" class="form-label">Image</label>
+                    <input style="width: 100%;" type="file" name="image" value="<%=author.image %>" required  >
 
-            </div>
-            <br>
-            <div class="row">
-                <div class="col-6 text-start">
-                    <a href="/authors"> Cancel</a>
                 </div>
-                <div class="col-6 text-end">
-                    <button type="submit" class="btn ">Update</button>
-                </div>
+                <br>
+                <div class="row">
+                    <div class="col-6 text-start">
+                        <a href="/authors"> Cancel</a>
+                    </div>
+                    <div class="col-6 text-end">
+                        <button type="submit" class="submit_btn ">Update</button>
+                    </div>
+                
             
-        
-            </div>
-        </form>
+                </div>
+            </form>
 
 
+        </div>
     </div>
     
 

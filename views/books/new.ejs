@@ -1,54 +1,56 @@
 <div class="container">
-    <div>
-        <h2 class="text-center">New Book</h2>
-    </div>
-    <br>
+    <div class="group_form ">
+        <div>
+            <h2 class="text-center">New Book</h2>
+        </div>
+        <br>
 
-    <div>
-        <form class="new_entry" action="/books" method="POST" enctype="multipart/form-data">
-           
-            <div class="mb-3">
-                <label style="width: 100%;" for="">Book Title</label>
-                <input style="width: 100%;" type="text" name="title"  required >
-            </div>
-            <br>
-            <div class="mb-3">
-                <label style="width: 100%;" for="">Author</label>
-                <input style="width: 100%;" type="text" name="author"  required >
-                     
-            </div>
-            <br>
-            <div class="mb-3">
-                <label style="width: 100%;" for="">Genre</label>
-                <input style="width: 100%;" type="text" name="genre"  required >
-                     
-            </div>
-            <br>
-            <div class="mb-3">
-                <label style="width: 100%;" for="">Published Date</label>
-                <input style="width: 100%;" type="date" name="date"  required >
-                     
-            </div>
-            <br>
-            <div class="mb-3 ">
-                <label style="width: 100%;" for="" class="form-label">Image</label>
-                <input style="width: 100%;" type="file" name="image"  required  >
-
-            </div>
-            <br>
-            <div class="row">
-                <div class="col-6 text-start">
-                    <a href="/books"> Cancel</a>
-                </div>
-                <div class="col-6 text-end">
-                    <button type="submit" class="btn ">Add</button>
-                </div>
+        <div>
+            <form class="new_entry" action="/books" method="POST" enctype="multipart/form-data">
             
-        
-            </div>
-        </form>
+                <div class="mb-3">
+                    <label  for="">Book Title</label>
+                    <input type="text" name="title"  required >
+                </div>
+                <br>
+                <div class="mb-3">
+                    <label  for="">Author</label>
+                    <input  type="text" name="author"  required >
+                        
+                </div>
+                <br>
+                <div class="mb-3">
+                    <label  for="">Genre</label>
+                    <input  type="text" name="genre"  required >
+                        
+                </div>
+                <br>
+                <div class="mb-3">
+                    <label  for="">Published Date</label>
+                    <input  type="date" name="date"  required >
+                        
+                </div>
+                <br>
+                <div class="mb-3 ">
+                    <label  for="" class="form-label">Image</label>
+                    <input type="file" name="image"  required  >
+
+                </div>
+                <br>
+                <div class="row">
+                    <div class="col-6 text-start">
+                        <a href="/books"> Cancel</a>
+                    </div>
+                    <div class="col-6 text-end">
+                        <button type="submit" class="submit_btn ">Add</button>
+                    </div>
+                
+            
+                </div>
+            </form>
 
 
+        </div>
     </div>
     
 
