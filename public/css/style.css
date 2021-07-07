@@ -91,6 +91,7 @@ form input{
     margin-top: 16px;
    margin-right:30px;
    font-size: 12px;
+   border-radius: 5px;
   }
 
 .btn:hover{
@@ -99,6 +100,7 @@ form input{
     color: rgb(8, 40, 41);
     font-size: 12px;
     align-content: center;
+    border-radius: 5px;
 }
 
 .submit_btn{
@@ -127,6 +129,7 @@ form input{
   padding: 6px;
    font-size: 16px;
    align-content: center;
+   border-radius: 5px;
 }
 
 .add_btn:hover{
@@ -136,4 +139,5 @@ form input{
    margin-right:30px;
    font-size: 16px;
    align-content: center;
+   border-radius: 5px;
 }
